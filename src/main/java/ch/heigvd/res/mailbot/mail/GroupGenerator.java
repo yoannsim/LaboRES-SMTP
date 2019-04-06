@@ -33,7 +33,7 @@ public class GroupGenerator {
            groups.add(group);
        }
 
-       //on met les personne qui reste dans un group au hasard
+       //on met les personnes qui reste dans un group au hasard
        while(comteurPresonne<tailleListe){
            groups.get(nbGroup - 1 ).setReceveur(listePersonne[comteurPresonne++]);
        }

@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Logger;
 
-import static org.junit.Assert.assertEquals;
+
 
 
 class GroupGeneratorTest {
@@ -28,7 +28,7 @@ class GroupGeneratorTest {
 
         listeGroup = gene.generate(config.getListeVictime());
 
-        assertEquals(4,listeGroup.length);
+        assert(4==listeGroup.length);
 
         String affichage = "";
         for(Group g : listeGroup){
