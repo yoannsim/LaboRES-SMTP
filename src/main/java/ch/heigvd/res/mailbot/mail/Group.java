@@ -1,13 +1,19 @@
 package ch.heigvd.res.mailbot.mail;
 
+import java.util.ArrayList;
+
 public class Group {
 
     private String envoyeur;
-    private String[] receveurs;
+    private ArrayList<String> receveurs = new ArrayList<String>();
 
-    public Group (String envoi,String ... reciver){
-        envoyeur = envoi;
-        receveurs = reciver;
+
+    public void setEnvoyeur(String envoyeur) {
+        this.envoyeur = envoyeur;
+    }
+
+    public void setReceveur(String receveur) {
+        this.receveurs.add(receveur);
     }
 
     public String getEnvoyeur() {
@@ -15,8 +21,9 @@ public class Group {
     }
 
     public String[] getReceveurs() {
-        return receveurs;
+        return  receveurs.toArray(new String[receveurs.size()]);
     }
+
 
 
 
