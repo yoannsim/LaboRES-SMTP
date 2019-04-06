@@ -21,6 +21,9 @@ public class GroupGenerator {
         if(tailleListe < (tailleMin * nbGroup))
              return null;
 
+        for(int i =0;i<20;i++)
+            melangerTableau(listePersonne);
+
        for(int i=0; i<nbGroup; i++){
            Group group = new Group();
            group.setEnvoyeur(listePersonne[comteurPresonne++]);
@@ -37,6 +40,20 @@ public class GroupGenerator {
 
 
         return groups.toArray(new Group[groups.size()]);
+    }
+
+    private static double random(double min, double max) {
+        return min + Math.random() * (max - min);
+    }
+
+    // Mélange un tableau
+    private void melangerTableau(String t[]) {
+        for (int i = 0; i < t.length; i++) {
+            int r = (int) random(0, t.length);
+            String tmp = t[i];
+            t[i] = t[r];
+            t[r] = tmp;
+        }
     }
 
 

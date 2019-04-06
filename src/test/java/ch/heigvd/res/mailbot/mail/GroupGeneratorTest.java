@@ -29,7 +29,7 @@ class GroupGeneratorTest {
         listeGroup = gene.generate(config.getListeVictime());
 
         assertEquals(4,listeGroup.length);
-        assertEquals("yoann.simonet95@gmail.com",listeGroup[0].getEnvoyeur());
+
         String affichage = "";
         for(Group g : listeGroup){
             affichage += "envoieur =" +  g.getEnvoyeur()+"\n";
