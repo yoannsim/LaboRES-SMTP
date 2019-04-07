@@ -6,11 +6,11 @@ public class GroupGenerator {
     private String[] listePersonne;
     private String[] Groupes;
 
-    //a fair avec un fichier de config
+    //a fair avec un fichier de config en dure pour le moment
     private int tailleMin = 3;
     private int nbGroup = 4;
 
-    public   Group[] generate(String[] listePersonne){
+    public  Group[] generate(String[] listePersonne){
 
         int tailleListe = listePersonne.length;
         int tailleGroup = tailleListe/nbGroup;
@@ -21,9 +21,11 @@ public class GroupGenerator {
         if(tailleListe < (tailleMin * nbGroup))
              return null;
 
+        //mélanger la liste de mail
         for(int i =0;i<20;i++)
             melangerTableau(listePersonne);
 
+      //remplire les groupes en fonction de la config
        for(int i=0; i<nbGroup; i++){
            Group group = new Group();
            group.setEnvoyeur(listePersonne[comteurPresonne++]);

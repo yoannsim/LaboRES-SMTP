@@ -44,10 +44,13 @@ public class ClientMail {
         LOG.info(l);
 
         //Début du protocol SMTP
-        pw.printf("EHLO something");
+        pw.write("EHLO something");
+        pw.write("\r\n");
+        pw.flush();
 
         //Réponse du serveur SMTP
         l = br.readLine();
+        LOG.info(l);
         if(!l.startsWith("250")){
             throw new IOException("SMTP Error" + l);
         }
