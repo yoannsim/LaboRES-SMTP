@@ -30,7 +30,7 @@ public class Message {
         return subject;
     }
 
-    public void setSubject(String from){
+    public void setSubject(String subject){
         this.subject = subject;
     }
 
@@ -38,7 +38,7 @@ public class Message {
         return data;
     }
 
-    public void setData(String from){
+    public void setData(String data){
         this.data = data;
     }
 }

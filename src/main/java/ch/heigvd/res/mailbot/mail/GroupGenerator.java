@@ -22,8 +22,7 @@ public class GroupGenerator {
              return null;
 
         //mélanger la liste de mail
-        for(int i =0;i<20;i++)
-            melangerTableau(listePersonne);
+        melangerTableau(listePersonne);
 
       //remplire les groupes en fonction de la config
        for(int i=0; i<nbGroup; i++){
@@ -44,8 +43,8 @@ public class GroupGenerator {
         return groups.toArray(new Group[groups.size()]);
     }
 
-    private static double random(double min, double max) {
-        return min + Math.random() * (max - min);
+    public static double random(double min, double max) {
+        return (min + Math.random() * (max - min));
     }
 
     // Mélange un tableau

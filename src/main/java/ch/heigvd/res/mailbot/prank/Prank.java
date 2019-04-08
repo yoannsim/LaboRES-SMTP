@@ -8,6 +8,7 @@ public class Prank {
     String blague;
 
     public Prank( Group group,String blague){
+        this.blague = "";
         this.blague = blague;
         this.group = group;
     }

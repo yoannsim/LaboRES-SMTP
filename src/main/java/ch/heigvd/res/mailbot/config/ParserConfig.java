@@ -40,9 +40,11 @@ public class ParserConfig {
             while((line = readerPrank.readLine()) != null) {
                 if(line.compareTo("***")==0){
                     lines.add(prank);
+                    prank = "";
                 }
                 else{
                     prank +=  line + "\n";
+
                 }
 
             }
