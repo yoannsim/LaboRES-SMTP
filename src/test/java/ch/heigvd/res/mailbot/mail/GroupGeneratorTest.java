@@ -26,7 +26,7 @@ class GroupGeneratorTest {
 
         GroupGenerator gene = new GroupGenerator();
 
-        listeGroup = gene.generate(config.getListeVictime());
+        listeGroup = gene.generate(config.getListeVictime(), 4);
 
         assert(4==listeGroup.length);
 

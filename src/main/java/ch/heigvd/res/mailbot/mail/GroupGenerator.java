@@ -9,9 +9,10 @@ public class GroupGenerator {
 
     //a fair avec un fichier de config en dure pour le moment
     private int tailleMin = 3;
-    private int nbGroup = 4;
+    private int nbGroup;
 
-    public  Group[] generate(String[] listePersonne){
+    public  Group[] generate(String[] listePersonne, int nbGroup){
+        this.nbGroup = nbGroup;
 
         int tailleListe = listePersonne.length;
         int tailleGroup = tailleListe/nbGroup;
@@ -20,7 +21,8 @@ public class GroupGenerator {
 
 
         if(tailleListe < (tailleMin * nbGroup))
-             return null;
+             throw new IllegalArgumentException("You don't have enougth mail address to make "
+                     + nbGroup + " groups.");
 
         //mélanger la liste de mail
         melangerTableau(listePersonne);

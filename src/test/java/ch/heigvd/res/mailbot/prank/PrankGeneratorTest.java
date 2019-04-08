@@ -33,7 +33,7 @@ class PrankGeneratorTest {
 
         GroupGenerator gene = new GroupGenerator();
 
-        listeGroup = gene.generate(config.getListeVictime());
+        listeGroup = gene.generate(config.getListeVictime(), 4);
         ListeBlague = config.getListePrank();
     }
 

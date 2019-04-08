@@ -21,9 +21,9 @@ public class MailBot {
     {
 
         try {
-            client = new ClientMail("127.0.0.1", 2525);
-            config = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt");
-            groups = new GroupGenerator().generate(config.getListeVictime());
+            config = new ParserConfig("./src/listePrank.txt", "./src/listeVictime.txt");
+            client = new ClientMail(config.getServer(), config.getServerPort());
+            groups = new GroupGenerator().generate(config.getListeVictime(), config.getNbGroup());
             pranks = new PrankGenerator().generate(groups, config.getListePrank());
             for(Prank p : pranks){
                 client.send(p.getMail());
