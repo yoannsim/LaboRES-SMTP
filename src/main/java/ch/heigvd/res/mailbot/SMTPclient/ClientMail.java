@@ -107,7 +107,7 @@ public class ClientMail {
         }
         pw.write("\r\n");
         //Le sujet
-        pw.write("Subject: " + message.getSubject() + "\r\n");
+        pw.write("Subject: " + message.getSubject() + "\r\n\r\n");
         pw.flush();
 
         LOG.info("Prank: " + message.getData());

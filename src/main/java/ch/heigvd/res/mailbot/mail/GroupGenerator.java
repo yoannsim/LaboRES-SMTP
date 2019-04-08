@@ -1,5 +1,6 @@
 package ch.heigvd.res.mailbot.mail;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class GroupGenerator {
 
@@ -43,14 +44,14 @@ public class GroupGenerator {
         return groups.toArray(new Group[groups.size()]);
     }
 
-    public static double random(double min, double max) {
-        return (min + Math.random() * (max - min));
+    public static int random(int min, int max) {
+        return new Random().nextInt(max + 1 - min) + min;
     }
 
     // Mélange un tableau
     private void melangerTableau(String t[]) {
         for (int i = 0; i < t.length; i++) {
-            int r = (int) random(0, t.length);
+            int r = (int) random(0, t.length - 1);
             String tmp = t[i];
             t[i] = t[r];
             t[r] = tmp;

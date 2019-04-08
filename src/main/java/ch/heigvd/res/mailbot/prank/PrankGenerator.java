@@ -13,7 +13,7 @@ public class PrankGenerator {
         ArrayList<Prank> Pranks = new ArrayList();
 
         for (Group g : listeGroup) {
-            Pranks.add(new Prank(g, listeBlague[(int) random(0, listeBlague.length)]));
+            Pranks.add(new Prank(g, listeBlague[(int) random(0, listeBlague.length - 1)]));
         }
 
         return Pranks.toArray(new Prank[Pranks.size()]);
