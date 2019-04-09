@@ -14,7 +14,7 @@ class ClientMailTest {
     @BeforeEach
     void setUp() {
 
-        mocklocale = new ClientMail("127.0.0.1",2525);
+        mocklocale = new ClientMail("192.168.99.100",25);
     }
 
     @Test
@@ -29,6 +29,7 @@ class ClientMailTest {
             mocklocale.send(MailTest);
         } catch (IOException e) {
             e.printStackTrace();
+            assert(false);
         }
 
     }

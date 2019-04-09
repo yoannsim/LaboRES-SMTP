@@ -41,7 +41,7 @@ public class ClientMail {
 
         //Attente d'un contact du serveur SMTP
         String l = br.readLine();
-        LOG.info(l);
+        LOG.info("name serveur: " + l + "\n");
 
         //Début du protocol SMTP
         pw.write("EHLO something");
@@ -50,7 +50,9 @@ public class ClientMail {
 
         //Réponse du serveur SMTP
         l = br.readLine();
-        LOG.info(l);
+
+
+        LOG.info("Réponse du serveur SMTP: " + l + "\n");
         if(!l.startsWith("250")){
             throw new IOException("SMTP Error" + l);
         }

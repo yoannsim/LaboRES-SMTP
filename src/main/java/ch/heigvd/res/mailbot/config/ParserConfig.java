@@ -58,7 +58,7 @@ public class ParserConfig {
         lines.clear();
 
         try {
-            FileInputStream input = new FileInputStream("./src/config.properties");
+            FileInputStream input = new FileInputStream("src/config.properties");
             prop.load(input);
             input.close();
         } catch (IOException e) {
