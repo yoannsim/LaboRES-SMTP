@@ -22,7 +22,7 @@ public class MailBot {
     {
 
         try {
-            config = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt");
+            config = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt","src/config.properties");
             LOG.info("ip serveur:" + config.getServer() +"\n");
             client = new ClientMail(config.getServer(), config.getServerPort());
             groups = new GroupGenerator().generate(config.getListeVictime(), config.getNbGroup());

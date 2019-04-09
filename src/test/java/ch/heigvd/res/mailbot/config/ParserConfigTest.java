@@ -16,7 +16,7 @@ public class ParserConfigTest {
     public void getListeVictimeTest() {
         ParserConfig p = null;
         try {
-            p = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt");
+            p = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt","src/config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
@@ -34,7 +34,7 @@ public class ParserConfigTest {
     public void getListePrankTest() {
         ParserConfig p = null;
         try {
-            p = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt");
+            p = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt","src/config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {

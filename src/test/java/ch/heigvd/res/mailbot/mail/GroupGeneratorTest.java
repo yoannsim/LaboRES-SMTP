@@ -17,7 +17,7 @@ class GroupGeneratorTest {
         ParserConfig config = null;
         Group[] listeGroup;
         try {
-            config = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt");
+            config = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt","src/config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {

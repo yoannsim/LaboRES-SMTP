@@ -24,7 +24,7 @@ class PrankGeneratorTest {
     void setUp() {
         ParserConfig config = null;
         try {
-            config = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt");
+            config = new ParserConfig("src/listePrank.txt", "src/listeVictime.txt","src/config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {

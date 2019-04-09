@@ -16,7 +16,7 @@ public class ParserConfig {
 
     private Properties prop = new Properties();
 
-    public ParserConfig(String pathPrank,String pathVictime) throws FileNotFoundException, UnsupportedEncodingException {
+    public ParserConfig(String pathPrank,String pathVictime,String pathConf) throws FileNotFoundException, UnsupportedEncodingException {
         BufferedReader readerPrank = new BufferedReader (new InputStreamReader(new FileInputStream(pathPrank), "UTF-8"));
         BufferedReader readerVictime = new BufferedReader (new InputStreamReader(new FileInputStream(pathVictime), "UTF-8"));
 
@@ -58,7 +58,7 @@ public class ParserConfig {
         lines.clear();
 
         try {
-            FileInputStream input = new FileInputStream("src/config.properties");
+            FileInputStream input = new FileInputStream(pathConf);
             prop.load(input);
             input.close();
         } catch (IOException e) {
