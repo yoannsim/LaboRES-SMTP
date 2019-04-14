@@ -29,4 +29,4 @@ If you do a good job, an external user should be able to clone your repo, edit a
 
 It is probably a good idea to start with a class diagram. Decide which classes you want to show (focus on the important ones) and describe their responsibilities in text. It is also certainly a good idea to include examples of dialogues between your client and an SMTP server (maybe you also want to include some screenshots here).
 
-![](https://github.com/yoannsim/LaboRES-SMTP/master/figures/UML.PNG)
+![UML](https://user-images.githubusercontent.com/47739482/56092624-a36ae680-5ebe-11e9-8c32-8ac070e85806.PNG)
