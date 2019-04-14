@@ -19,4 +19,6 @@ public class PrankGenerator {
         return Pranks.toArray(new Prank[Pranks.size()]);
     }
 
+
+
 }

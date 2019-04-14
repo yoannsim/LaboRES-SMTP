@@ -24,8 +24,11 @@ public class GroupGenerator {
              throw new IllegalArgumentException("You don't have enougth mail address to make "
                      + nbGroup + " groups.");
 
-        //mélanger la liste de mail
-        melangerTableau(listePersonne);
+        //mélanger la liste de mail 20X
+        for(int i = 0;i<20;i++){
+            melangerTableau(listePersonne);
+        }
+
 
       //remplire les groupes en fonction de la config
        for(int i=0; i<nbGroup; i++){
@@ -50,7 +53,7 @@ public class GroupGenerator {
         return new Random().nextInt(max + 1 - min) + min;
     }
 
-    // Mélange un tableau
+    // Mélange un tableau de sring
     private void melangerTableau(String t[]) {
         for (int i = 0; i < t.length; i++) {
             int r = (int) random(0, t.length - 1);

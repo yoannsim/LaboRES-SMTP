@@ -18,8 +18,9 @@ public class Prank {
         Message mail = new Message();
         mail.setFrom(group.getEnvoyeur());
         mail.setTo(group.getReceveurs());
+        mail.setSubject(blague.substring(0,blague.indexOf("\n")));
         mail.setData(blague);
-        mail.setSubject("Ma blague prefere");
+
 
 
         return mail;
