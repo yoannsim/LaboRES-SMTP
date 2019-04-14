@@ -30,6 +30,7 @@ If you want to custom the list of pranks, you have to edit the file listePrank.t
 
 If you want to custom the list of your victims, you have to edit the file listeVictime.txt, just add their mail address to this file.
 
+
 These two files can be found in the src directory.
 
 
@@ -48,12 +49,12 @@ or use website such as MailTrap (https://mailtrap.io).
 It is probably a good idea to start with a class diagram. Decide which classes you want to show (focus on the important ones) and describe their responsibilities in text. It is also certainly a good idea to include examples of dialogues between your client and an SMTP server (maybe you also want to include some screenshots here).
 Our code is divided in 4 packages :
 
-####### config
+###### config
 
 This package contains the ParserConfig class. It's meant to "transform" the configurations files into String[] to be
 understandable to our program.
 
-####### mail
+###### mail
 
 This package contains the Group, GroupGenerator and Message Classes.
 
@@ -63,7 +64,7 @@ The GroupGenerator class is here to create all the group of the program (use eve
 
 The Message class define the mail behaviour (the sender, the receptionists, the subject and the text of the mail).
 
-####### prank
+###### prank
 
 This package is used to define what is a prank and is composed of Prank and PrankGenerator classes.
 
@@ -72,7 +73,7 @@ The Prank class define the prank lines and the victims of this prank (one group)
 The PrankGenerator class is here to create all pranks. It generate couples of prank-group. The same
 prank can be assigned to more than one group.
 
-####### SMTPclient
+###### SMTPclient
 
 This package contains the ClientMail class. This class behaviour is to send emails based
 on the prank-group pairs. It's send all victims as "To" ans follow the SMTP protocol standard.
