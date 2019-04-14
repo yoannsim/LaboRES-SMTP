@@ -26,9 +26,9 @@ For testing our application safely you can use a mock SMTP server.
 To deploy our PrankGenerator soft, you must clone our github project (https://github.com/yoannsim/LaboRES-SMTP). For this,
 you'll need to have a github account and gitbash command installed in your computer.
 
-1.  If you want to custom the list of pranks, you have to edit the file listePrank.txt, use the same syntax as the samples you'll find there.
+1.  If you want to custom the list of pranks, you have to edit the file ```listePrank.txt```, use the same syntax as the samples you'll find there.
 
-2.  If you want to custom the list of your victims, you have to edit the file listeVictime.txt, just add their mail address to this file.
+2.  If you want to custom the list of your victims, you have to edit the file ```listeVictime.txt```, just add their mail address to this file.
 
 3.  You have to specifis the value of the **smtpServerPort** and **IP** constant in ```config.properties ``` 
 In this same file you can choose **how many groups** in your pranks campaign will target.
