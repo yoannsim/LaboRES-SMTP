@@ -26,27 +26,23 @@ For testing our application safely you can use a mock SMTP server.
 To deploy our PrankGenerator soft, you must clone our github project (https://github.com/yoannsim/LaboRES-SMTP). For this,
 you'll need to have a github account and gitbash command installed in your computer.
 
-If you want to custom the list of pranks, you have to edit the file listePrank.txt, use the same syntax as the samples you'll find there.
+1.  If you want to custom the list of pranks, you have to edit the file listePrank.txt, use the same syntax as the samples you'll find there.
 
-If you want to custom the list of your victims, you have to edit the file listeVictime.txt, just add their mail address to this file.
+2.  If you want to custom the list of your victims, you have to edit the file listeVictime.txt, just add their mail address to this file.
 
+3.  You have to specifis the value of the **smtpServerPort** and **IP** constant in ```config.properties ``` 
+In this same file you can choose **how many groups** in your pranks campaign will target.
 
-These two files can be found in the src directory.
-
-
+These three files can be found in the src directory.
 
 To run our application, just open a command line and write java -jar LaboRES-SMTP-1.0-SNAPSHOT-launcher.jar.
 
 You can also throw the main method in the MailBot class.
 
-
-
-Beware, this application make spam, if you want to use it without problem, you'll need to install and run a mock server 
-or use website such as MailTrap (https://mailtrap.io).
+Beware, this application make spam, if you want to use it without problem, you'll need to install and run a mock server.
 
 #### A description of your implementation document the key aspects of your code. 
 
-It is probably a good idea to start with a class diagram. Decide which classes you want to show (focus on the important ones) and describe their responsibilities in text. It is also certainly a good idea to include examples of dialogues between your client and an SMTP server (maybe you also want to include some screenshots here).
 Our code is divided in 4 packages :
 
 ###### config
